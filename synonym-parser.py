@@ -49,6 +49,9 @@ def parseSite(index, pageNumber):
 def getUrls():
     i = 22
     while i <= 50:
+        if (i - 22 <= 21):
+            i+=1
+            continue
         urls = parseSite(i, numberOfPages[i - 22][1])
         f = open("urls-"+ repr(i - 21) +".txt", "a")
         result = ""
